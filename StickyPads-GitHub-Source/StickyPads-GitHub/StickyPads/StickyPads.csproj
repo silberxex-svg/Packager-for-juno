@@ -1,0 +1,59 @@
+﻿
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>10.0</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="SimpleRockets2">
+      <HintPath>lib\SimpleRockets2.dll</HintPath>
+    </Reference>
+    <Reference Include="ModApi">
+      <HintPath>lib\ModApi.dll</HintPath>
+    </Reference>
+    <Reference Include="ModApi.Core">
+      <HintPath>lib\ModApi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Jundroo.ModTools">
+      <HintPath>lib\Jundroo.ModTools.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>lib\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>lib\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Program.cs" />
+    <Compile Remove="ApiInspector/**/*.cs" />
+    <Compile Remove="GameDecompiled/**/*.cs" />
+    <Compile Remove="DecompiledGame/**/*.cs" />
+    <Compile Remove="PartModifierScriptBase.cs" />
+    <Compile Remove="PartModifierScript.cs" />
+    <Compile Remove="JointRotatorScript.cs" />
+    <Compile Remove="JointRotatorData.cs" />
+    <Compile Remove="IInputController.cs" />
+    <Compile Remove="IBodyScript.cs" />
+    <Compile Remove="IBodyJoint.cs" />
+    <Compile Remove="BodyScript.cs" />
+    <Compile Remove="BodyPhysicsJoint.cs" />
+    <Compile Remove="AttachPoint.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="GrappleModel\Grappling hook\tinker.obj"
+                      LogicalName="StickyPads.GrappleModel.tinker.obj" />
+    <EmbeddedResource Include="GrappleModel\Grappling hook\obj.mtl"
+                      LogicalName="StickyPads.GrappleModel.obj.mtl" />
+  </ItemGroup>
+
+</Project>
